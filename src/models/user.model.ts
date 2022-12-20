@@ -47,6 +47,6 @@ userSchema.methods.comparePassword = async function (candidatePassword: string):
 
 const db = mongoose.connection.useDb('User-Product-API')
 
-const User = db.model('Users', userSchema)
+const User = db.model<UserDocument>('Users', userSchema)
 
 export default User
