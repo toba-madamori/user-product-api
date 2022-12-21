@@ -26,6 +26,6 @@ const sessionSchema = new mongoose.Schema({
 
 const db = mongoose.connection.useDb('User-Product-API')
 
-const Session = db.model('Sessions', sessionSchema)
+const Session = db.model<SessionDocument>('Sessions', sessionSchema)
 
 export default Session
